@@ -1,0 +1,68 @@
+- source https://www.youtube.com/watch?v=2vCQPI6RXQ8&list=PLRsbF2sD7JVqUucetXQ13Ui46K54YzQYW&index=11&t=1271s
+- use right tool for the job
+- "Functional style of programming"
+- best practices
+- hopefully you know most of it and that's great
+
+- who works with which Java version
+
+- doing too much in single lambda
+  - what is lambda
+  - "function" as parameter
+  - two ways of writing it
+  - is it more readable?
+  => extract it into method with good name, use method reference
+
+- returning a Stream
+  - you CAN return stream
+  - stream is not a DATA structure!
+  - what is Stream? data derived from collection, can be used to create pipelines
+  - it is intermediate result! lazy.
+  - intermediate X terminal functions
+  - can only be used once!
+  - declare it into variable? NO
+  - it returns Stream > do I know if it was consumed? Can I check it?
+  - should we return a stream? depends...
+      - private function
+      - stream which is create all the time you call it
+      - large or infinite stream
+      - but otherwise return collection
+
+- Mutable Objects
+  - functional programming = no mutable data
+  - mutable data are hard to debug
+  - less moving parts
+  - easily to reason about the code
+  - no mental map required to remember the state
+  - change newList, print old list and newList
+  - withName instead of setName
+  - dont be afraid of creating new objects
+
+
+Order of operations
+  - its lazy, so we dont have to care?
+  - first 3 unique countries from beer countries
+  - order matters!
+  - infinite stream, its ok, its limited -> it runs forever
+  - limit is waiting for at least 10 items...
+  - paralell FUN, beware about parallel
+  - beware about infiniteStreams, but there are other tools... .range()
+
+- creating own higher order functions
+  - new level of abstraction
+  - reduce boilerplate, duplicite code
+  - logUpper, logLower
+
+- Getting an Optional
+  - wrapper of possibly null values
+  - buuut it can still be null...
+  - but ifPresent looks like old null check...
+  - functional methods on Optional
+  - orElse falacy
+
+- Checked exception within lambda
+  - IntelliJ can solv this for me... Throw RuntimeException()...
+  - ok so we can extract it
+  - custom functional interface
+  - Either types
+  - Either<Exception,Object>
