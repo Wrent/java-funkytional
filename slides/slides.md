@@ -145,9 +145,48 @@ Function<T, R>
 ```
 
 ```java
-Consumer<T>
+Consumer<T> // Function<T, void>
 ```
 
 ```java
-Supplier<R>
+Supplier<R> // Function <void, R>
+```
+
+---
+
+# Working with Optional
+
+ - `Optional` is a great type which enables you to handle null values properly
+ - but it is "great" only if you use it properly
+ 
+```java
+Optional<String> = null; // never do that
+```
+
+```java
+Optional<String> optional = getOptional();
+
+if (optional.isPresent()) {
+   System.out.println(optional.get());
+}
+```
+
+```java
+.map(String::toUpperCase)
+```
+
+```java
+.ifPresent(System.out::println)
+```
+
+```java
+.orElse("DEFAULT")
+```
+
+```java
+.orElse(() -> getDefault())
+```
+
+```java
+.orElseThrow()
 ```
