@@ -190,3 +190,41 @@ if (optional.isPresent()) {
 ```java
 .orElseThrow()
 ```
+
+---
+
+# Checked exceptions withing lambdas
+
+ - it's not possible to call something throwing a checked exception within a lambda
+
+```java
+    List.of("Hello")
+        .stream()
+        .map(CheckedExceptions::transform) // compile error
+        .collect(Collectors.toList());
+```
+ - We can do this, but it's not really handling the exception. What if you have millions of entries and this fails just before the end?
+ 
+ ```java
+List.of("Hello")
+        .stream()
+        .map(str -> {
+          try {
+            return transform(str);
+          } catch (MyException e) {
+            throw new RuntimeException(e);
+          }
+        })
+        .collect(Collectors.toList());
+```
+
+ - there is a better functional approach
+
+
+---
+
+class: center, middle
+
+# Questions?
+
+# Thank you
