@@ -1,6 +1,14 @@
 package cz.wrent.javaFunkytional;
 
+import java.util.function.Consumer;
+
 public class HigherOrderFunctions {
+
+  public static void main(String[] args) {
+    HigherOrderFunctions higherOrderFunctions = new HigherOrderFunctions();
+    higherOrderFunctions.cookPasta(new KitchenImpl(), new Food("Spaghetti", Rating.EXCEPTIONAL));
+    higherOrderFunctions.cookSteak(new KitchenImpl(), new Food("Steak", Rating.EXCEPTIONAL));
+  }
 
   void cookPasta(Kitchen kitchen, Food food) {
     kitchen.prepare();
@@ -19,6 +27,7 @@ public class HigherOrderFunctions {
   }
 
   interface Kitchen {
+
     void prepare();
 
     void boilWater();
