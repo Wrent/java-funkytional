@@ -28,15 +28,15 @@
       - large or infinite stream
       - but otherwise return collection
 
-- Mutable Objects
-  - functional programming = no mutable data
-  - mutable data are hard to debug
-  - less moving parts
-  - easily to reason about the code
-  - no mental map required to remember the state
-  - change newList, print old list and newList
-  - withName instead of setName
-  - dont be afraid of creating new objects
+                        - Mutable Objects
+                          - functional programming = no mutable data
+                          - mutable data are hard to debug
+                          - less moving parts
+                          - easily to reason about the code
+                          - no mental map required to remember the state
+                          - change newList, print old list and newList
+                          - withName instead of setName
+                          - dont be afraid of creating new objects
 
 
 Order of operations

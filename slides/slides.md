@@ -69,3 +69,64 @@ class: center, middle
   return processItem(item)
 })
 ```
+
+---
+
+# Returning a Stream
+
+## What is a Stream?
+
+ - NOT a data structure
+ - data stream **derived** from a collection
+ - intermediate result, which can be terminated by terminal function
+ - lazy
+ - can be terminated only once
+
+---
+# Returning a Stream
+
+## Can you do it?
+ 
+--
+ ![:scale 50%](https://i2.wp.com/mgfitlife.com/wp-content/uploads/2016/10/38222418.jpg?ssl=1)
+ 
+---
+
+# Returning a Stream
+
+## Do you know if it was consumed? Can you find out?
+
+```java
+Stream<String> getMyBeautifulStream();
+```
+
+## Can you do it?
+
+ - private method
+ - Stream which is created every time you call it
+ - large or infinite streams
+ - if you can return collection, just do that instead :)
+
+---
+
+# Order of operations matters
+
+ - Streams are lazy evaluated, but it still matters how you order operations
+ - Infinite streams can be useful, but consider other tools
+ - be careful with `.parallel()`
+ 
+```java
+.limit(5)
+```
+
+```java
+.distinct()
+```
+
+```java
+IntStream.iterate(0, i -> i + 1)
+```
+
+```java
+IntStream.range(0, 10)
+```
