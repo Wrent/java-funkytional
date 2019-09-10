@@ -16,4 +16,56 @@ Heavily based on amazing talk by **Brian Vermeer** at Devoxx Poland 2019: [Write
 
 ---
 
-# Introduction
+class: center, middle
+
+# Functional Java?
+
+---
+class: center, middle
+
+
+# ~~Functional Java?~~
+
+## Java with "functional style of programming"
+
+
+---
+
+class: center, middle
+
+# Which Java version?
+
+---
+class: center, middle
+
+# Do you use functional features?
+
+---
+
+# What we will talk about? 
+
+--
+class: center, middle
+
+## Best practices, most of which you might already know
+
+---
+
+# Doing too much in a single lambda
+
+ - basically functions which can be passed as parameter
+ - multiple ways of writing lambdas
+
+```java
+.map(item -> processItem(item))
+```
+
+```java
+.map(this::processItem)
+```
+
+```java
+.map(item -> {
+  return processItem(item)
+})
+```
