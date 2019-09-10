@@ -51,7 +51,7 @@ class: center, middle
 
 ---
 
-# Doing too much in a single lambda
+# Don't do too much in a single lambda
 
  - basically functions which can be passed as parameter
  - multiple ways of writing lambdas
@@ -129,4 +129,25 @@ IntStream.iterate(0, i -> i + 1)
 
 ```java
 IntStream.range(0, 10)
+```
+
+---
+
+# Custom higher order functions
+
+ - function which takes another function as argument or returns a function
+ - create a new level of abstraction
+ - remove duplicate code
+ - replaces "complex" Strategy design patter
+ 
+```java
+Function<T, R>
+```
+
+```java
+Consumer<T>
+```
+
+```java
+Supplier<R>
 ```
