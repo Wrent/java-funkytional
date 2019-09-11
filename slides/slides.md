@@ -41,11 +41,11 @@ class: center, middle
 # Do you use functional features?
 
 ---
+class: center, middle
 
 # What we will talk about? 
 
 --
-class: center, middle
 
 ## Best practices, most of which you might already know
 
