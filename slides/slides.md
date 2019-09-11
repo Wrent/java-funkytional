@@ -228,3 +228,5 @@ class: center, middle
 # Questions?
 
 # Thank you
+
+## https://github.com/Wrent/java-funkytional
