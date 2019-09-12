@@ -138,7 +138,7 @@ IntStream.range(0, 10)
  - function which takes another function as argument or returns a function
  - create a new level of abstraction
  - remove duplicate code
- - replaces "complex" Strategy design patter
+ - replaces "complex" Strategy or Template method design patterns
  
 ```java
 Function<T, R>
