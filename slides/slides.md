@@ -160,7 +160,7 @@ Supplier<R> // Function <void, R>
  - but it is "great" only if you use it properly
  
 ```java
-Optional<String> = null; // never do that
+Optional<String> opt = null; // never do that
 ```
 
 ```java
